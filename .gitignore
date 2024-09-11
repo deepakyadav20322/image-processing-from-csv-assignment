@@ -1,0 +1,9 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Uploaded files
+uploads/
+compressed-images/

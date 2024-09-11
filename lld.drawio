@@ -1,0 +1,100 @@
+<mxfile host="app.diagrams.net" modified="2024-07-21T20:35:19.317Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="jmx_f0WAcTafLIZnEqob" version="24.3.1" type="device">
+  <diagram name="Page-1" id="POezbNMbOjDw79l-Ra2E">
+    <mxGraphModel dx="993" dy="543" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="980" pageHeight="690" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p6jskFT_qc9lohdLBAee-1" value="POST: /upload" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="50" y="320" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="p6jskFT_qc9lohdLBAee-2" value="GET: /status" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="260" y="320" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="p6jskFT_qc9lohdLBAee-3" value="/webhook" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="850" y="320" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="p6jskFT_qc9lohdLBAee-4" value="NoSQL&lt;div&gt;DB&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="390" y="60" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p6jskFT_qc9lohdLBAee-6" value="&lt;strong&gt;Functionality&lt;/strong&gt;:&lt;ul&gt;&lt;li&gt;Validate the uploaded CSV file&lt;/li&gt;&lt;li&gt;Generate a unique request ID&lt;/li&gt;&lt;li&gt;Store initial request data in the database&lt;/li&gt;&lt;li&gt;Return the request ID to the client&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="10" y="150" width="280" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="p6jskFT_qc9lohdLBAee-8" value="" style="endArrow=classic;html=1;rounded=0;exitX=1.088;exitY=-0.008;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="p6jskFT_qc9lohdLBAee-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="340" y="190" as="sourcePoint" />
+            <mxPoint x="390" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p6jskFT_qc9lohdLBAee-10" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.613;entryY=1.062;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="p6jskFT_qc9lohdLBAee-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="310" y="320" as="sourcePoint" />
+            <mxPoint x="430" y="142" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="310" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p6jskFT_qc9lohdLBAee-11" value="&lt;strong&gt;Functionality&lt;/strong&gt;:&lt;ul&gt;&lt;li&gt;Retrieve the status of the request from the database&lt;/li&gt;&lt;li&gt;Return the status to the client&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="70" y="430" width="340" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p6jskFT_qc9lohdLBAee-13" value="Image Processor" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="660" y="100" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="p6jskFT_qc9lohdLBAee-14" value="processImages" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="490" y="320" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="p6jskFT_qc9lohdLBAee-15" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;1.&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Download images from URLs&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp; &amp;nbsp;2.Compress images using Sharp&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;3.Upload processed images to&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;storage (e.g., AWS S3, local storage)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;4. Update product entries with new image URLs&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="565" y="20" width="390" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="p6jskFT_qc9lohdLBAee-16" value="&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;1.&amp;nbsp;&lt;/b&gt;Fetch products by request ID&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&amp;nbsp; &amp;nbsp;2. Process each image URL (download, compress, upload)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; 3. Update the product document with the new output image URLs&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&amp;nbsp; &amp;nbsp; 4. Update the request status in the database&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="360" y="440" width="550" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="p6jskFT_qc9lohdLBAee-17" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.442;entryY=0.987;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.438;exitY=0.009;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="p6jskFT_qc9lohdLBAee-14" target="p6jskFT_qc9lohdLBAee-13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="490" y="310" as="sourcePoint" />
+            <mxPoint x="540" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p6jskFT_qc9lohdLBAee-18" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="p6jskFT_qc9lohdLBAee-13" target="p6jskFT_qc9lohdLBAee-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="490" y="310" as="sourcePoint" />
+            <mxPoint x="540" y="260" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="660" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p6jskFT_qc9lohdLBAee-19" value="Degraded images url" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="520" y="200" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="p6jskFT_qc9lohdLBAee-20" value="Original image url" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="655" y="230" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="p6jskFT_qc9lohdLBAee-21" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=0.082;exitY=0.002;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="p6jskFT_qc9lohdLBAee-14" target="p6jskFT_qc9lohdLBAee-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="490" y="310" as="sourcePoint" />
+            <mxPoint x="540" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p6jskFT_qc9lohdLBAee-22" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="p6jskFT_qc9lohdLBAee-14" target="p6jskFT_qc9lohdLBAee-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="370" as="sourcePoint" />
+            <mxPoint x="750" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p6jskFT_qc9lohdLBAee-23" value="Send a notification to the webhook URL" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="600" y="345" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="p6jskFT_qc9lohdLBAee-24" value="&lt;h4&gt;Worker Script&lt;/h4&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="510" y="600" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p6jskFT_qc9lohdLBAee-25" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="p6jskFT_qc9lohdLBAee-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="545" y="600" as="sourcePoint" />
+            <mxPoint x="510" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
