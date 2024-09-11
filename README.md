@@ -76,4 +76,4 @@ This project is an image processing system designed to handle CSV files containi
 
 # LLD Draw IO
 
-Click the image below to view [LLD.pdf](https://deepakyadav20322.github.io/lld.pdf)
+Go to view [LLD.pdf] (go to the repo files and open lld.pdf)
