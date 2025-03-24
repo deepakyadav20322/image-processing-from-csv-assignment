@@ -19,6 +19,9 @@ app.get('/get-csv', (req, res) => {
 app.use('/upload', uploadRouter);
 app.use('/status', statusRouter);
 app.use('/webhook', webhookRouter);
+app.get('/health', (req, res) => {
+    res.json({ok:"health is ok test"});
+});
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
